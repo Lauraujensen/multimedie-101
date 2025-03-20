@@ -7,6 +7,7 @@ on.addEventListener('click', () => { // Toggle gør, at man kan skifte mellem to
     body.classList.toggle('night');
 })
 
+// ANIMATION -------------------------------------------------------------------------------------
 
 function fadeInOnScroll() {
     let containers = document.querySelectorAll('.container, .container-ux');
@@ -25,8 +26,8 @@ function fadeInOnScroll() {
     });
 }
 
-// Kør funktionen når man scroller
+// Kører funktionen når man scroller
 window.addEventListener('scroll', fadeInOnScroll);
 
-// Kør den én gang, når siden loader
+// Kører den én gang, når siden loader
 fadeInOnScroll();
