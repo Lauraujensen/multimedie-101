@@ -1,0 +1,241 @@
+/* Nulstiller standard margin og padding samt sætter en fælles skrifttype */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: rgb(232, 246, 255);
+}
+
+/* HEADER----------------------------------------------------------------------------- */
+.navbar{
+    background: rgb(202, 222, 234);
+    padding: 1.5rem;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar li{
+    margin: 0 2rem;
+}
+
+.navbar a{
+    color: rgb(41, 41, 74);
+    text-decoration: none;
+    font-family: Helvetica;
+    cursor: pointer;
+}
+
+.navbar a:hover{
+    color: rgb(198, 82, 138);
+}
+/* HEADER----------------------------------------------------------------------------- */
+
+
+
+/* MAIN----------------------------------------------------------------------------- */
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    color: rgb(41, 41, 74);
+}
+
+.line{
+    width: 55rem;
+    margin: 0 auto;  /* Centrerer elementet vandret */
+    margin-top: 0.8rem;
+    border: rgba(41, 41, 74, 0.289) solid 0.8px;
+}
+
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 2rem;
+    padding: 0 5rem;
+    animation: animate__fadeInUp 1s;
+}
+
+@keyframes animate__fadeInUp{
+    0% {
+        transform: translatey(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+main .box{
+    text-align: center;
+    background: rgb(202, 222, 234);
+    color: rgb(2, 25, 39);
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    padding: 3rem;
+    border-radius: 1.3rem;
+    height: 30rem;
+    flex: 1; /* Sikrer, at boksene er ens i størrelse */
+}
+
+main h2{
+    padding: 1rem;
+    padding-bottom: 3rem;
+    cursor: pointer;
+    transition: ease 0.3s;
+    color: rgb(41, 41, 74);
+}
+
+main a{
+    text-decoration: none;
+}
+
+main h2:hover{
+    color: rgb(198, 82, 138);
+}
+
+.button{
+    position: absolute;
+    width: 5rem;
+    height: 2.4rem;
+    background: rgb(202, 222, 234);
+    border-radius: 0.8rem;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.on{
+    position: absolute;
+    width: 3rem;
+    height: 2.4rem;
+    background: rgb(105, 128, 141);
+    border-radius: 0.8rem;
+    left: 25%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* MAIN----------------------------------------------------------------------------- */
+
+
+/* NIGHT----------------------------------------------------------------------------- */
+.night{
+    background: rgb(9, 45, 68);
+}
+
+.night h1{
+    color: rgb(188, 221, 241);
+}
+
+.night .line{
+    border: rgba(188, 221, 241, 0.38) solid 0.8px;
+}
+
+body.night .on{
+    left: 75%;
+}
+
+.night .navbar{
+    background: rgb(2, 25, 39);
+}
+
+.night .navbar a{
+    color: rgb(188, 221, 241);
+}
+
+.night .navbar a:hover{
+    color: rgb(198, 82, 138);
+}
+
+.night .box{
+    background-color: rgb(2, 25, 39);
+    color: rgb(188, 221, 241);
+    box-shadow: 0 0 20px rgb(56, 81, 97);
+}
+
+.night h2{
+    color: rgb(188, 221, 241);
+}
+
+body, .box, .box-ux, .navbar, .navbar a {
+    transition: background 0.4s ease-in-out, color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.night h3{
+    color:  rgb(188, 221, 241);
+}
+
+.night .box-ux{
+    background-color: rgb(2, 25, 39);
+    color: rgb(188, 221, 241);
+    box-shadow: 0 0 20px rgb(56, 81, 97);
+}
+
+
+/* NIGHT----------------------------------------------------------------------------- */
+
+
+
+/* MAIN UX----------------------------------------------------------------------------- */
+main h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9rem;
+    color: rgb(41, 41, 74);
+}
+
+main .container-ux{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 2rem;
+    padding: 0 5rem;
+    animation: animate__fadeInUp 1s;
+}
+
+main .box-ux{
+    text-align: center;
+    background: rgb(202, 222, 234);
+    color: rgb(2, 25, 39);
+    border-radius: 1.3rem;
+    height: 4rem;
+    font-size: 0.9rem;
+    flex: 1; /* Sikrer, at boksene er ens i størrelse */
+    padding-top: 0.3rem;
+}
+
+.container, .container-ux {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.container.show, .container-ux.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* MAIN UX----------------------------------------------------------------------------- */
