@@ -11,9 +11,14 @@ body{
 }
 
 /* HEADER----------------------------------------------------------------------------- */
-.navbar{
-    background: rgb(202, 222, 234);
-    padding: 1.5rem;
+.navbar {
+    position: absolute; /* Eller 'fixed' hvis du vil have den fast */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Sørger for, at navbaren er øverst */
+    background: rgba(202, 222, 234, 0.122); /* Gennemsigtig baggrund */
+    backdrop-filter: blur(5px); /* Blur-effekt */
 }
 
 .navbar ul{
@@ -23,7 +28,7 @@ body{
 }
 
 .navbar li{
-    margin: 0 2rem;
+    margin: 1.5rem;
 }
 
 .navbar a{
@@ -36,6 +41,49 @@ body{
 .navbar a:hover{
     color: rgb(198, 82, 138);
 }
+
+.video-wrapper {
+    width: 100%;
+    height: 100vh; /* Fylder hele skærmen ved første visning */
+    position: relative;
+    overflow: hidden; /* Sørger for, at intet stikker ud */
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for, at videoen dækker hele området */
+    opacity: 0.9;
+}
+
+section .overskrift{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    border-radius: 2rem;
+    background: rgba(202, 222, 234, 0.501); /* Gennemsigtig baggrund */
+    backdrop-filter: blur(5px); /* Blur-effekt */;
+}
+
+.video-wrapper p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    position: absolute;
+    font-size: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+}
+
 /* HEADER----------------------------------------------------------------------------- */
 
 
@@ -114,7 +162,7 @@ main h2:hover{
     height: 2.4rem;
     background: rgb(202, 222, 234);
     border-radius: 0.8rem;
-    bottom: 0.5rem;
+    bottom: -46rem;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.2s;
@@ -151,14 +199,6 @@ main h2:hover{
 
 body.night .on{
     left: 75%;
-}
-
-.night .navbar{
-    background: rgb(2, 25, 39);
-}
-
-.night .navbar a{
-    color: rgb(188, 221, 241);
 }
 
 .night .navbar a:hover{
